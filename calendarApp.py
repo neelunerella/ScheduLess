@@ -400,9 +400,12 @@ class CalendarApp(App):
                 # save to app's sandbox diirectory
                 dest_path = join(expanduser("~"), "Documents", basename(selection[0]))
                 shutil.copy(selection[0], dest_path)
-                self.pfp.source = dest_path
-            else:
                 self.pfp.source = selection[0]
+                print("selected pic")
+            else:
+                print("here")
+                self.pfp.source = selection[0]
+                print("selected pic")
         popup.dismiss()
     
     def goSettings(self):
